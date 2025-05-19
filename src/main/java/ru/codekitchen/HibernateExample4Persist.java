@@ -17,7 +17,7 @@ public class HibernateExample4Persist {
         try {
             entityManager.getTransaction().begin();
 
-            // Пример сохранений двух новых записей с указанием связи через родительскую сущность (Student)
+            // Пример создания ДВУХ новых записей с указанием связи через РОДИТЕЛЬСКУЮ сущность (Student)
             Student student = new Student(25, "Test", "Test");
             Address address = new Address("Test", 5, 5);
             student.setAddress(address);

@@ -17,7 +17,7 @@ public class HibernateExample6CorrectRemove {
         try {
             entityManager.getTransaction().begin();
 
-            // Пример правильного удаления записи студента, когда мы сначала разрываем связь между студентом и адресом
+            // Пример правильного удаления записи студента, когда мы сначала РАЗРЫВАЕМ связь между студентом и адресом
             Student student = entityManager.find(Student.class, 13);
             Address address = student.getAddress();
             address.setStudent(null);

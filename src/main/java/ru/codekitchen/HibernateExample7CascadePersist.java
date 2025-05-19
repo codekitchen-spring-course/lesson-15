@@ -17,8 +17,8 @@ public class HibernateExample7CascadePersist {
         try {
             entityManager.getTransaction().begin();
 
-            // Пример каскадного создания новой записи у зависимой сущности
-            // ВАЖНО: будет работать, если НАСТРОЕН каскад на добавление!
+            // Пример КАСКАДНОГО создания новой записи у зависимой сущности (Address)
+            // ВАЖНО: будет работать, если НАСТРОЕН каскад на ДОБАВЛЕНИЕ!
             Student student = new Student(25, "Test", "Test");
             Address address = new Address("Test", 5, 5);
             student.setAddress(address);

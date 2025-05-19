@@ -17,7 +17,7 @@ public class HibernateExample1Persist {
         try {
             entityManager.getTransaction().begin();
 
-            // Пример сохранений двух новых записей с указанием связи через зависимую сущность (Address)
+            // Пример создания ДВУХ новых записей с указанием связи через ЗАВИСИМУЮ сущность (Address)
             Student student = new Student(20, "Sergeev", "Anton");
             entityManager.persist(student);
             Address address = new Address("Central street", 92, 118);

@@ -16,8 +16,8 @@ public class HibernateExample9CascadeRemove {
         try {
             entityManager.getTransaction().begin();
 
-            // Пример каскадного удаления данных у зависимой сущности
-            // ВАЖНО: будет работать, если НАСТРОЕН каскад на удаление!
+            // Пример КАСКАДНОГО удаления данных у зависимой сущности (Address)
+            // ВАЖНО: будет работать, если НАСТРОЕН каскад на УДАЛЕНИЕ!
             Student student = entityManager.find(Student.class, 14);
             entityManager.remove(student);
 

@@ -17,8 +17,8 @@ public class HibernateExample8CascadeMerge {
         try {
             entityManager.getTransaction().begin();
 
-            // Пример каскадного обновления данных у зависимой сущности
-            // ВАЖНО: будет работать, если НАСТРОЕН каскад на обновление!
+            // Пример КАСКАДНОГО обновления данных у зависимой сущности (Address)
+            // ВАЖНО: будет работать, если НАСТРОЕН каскад на ОБНОВЛЕНИЕ!
             Student student = entityManager.find(Student.class, 14);
             Address address = student.getAddress();
             address.setStreet("New Test");
